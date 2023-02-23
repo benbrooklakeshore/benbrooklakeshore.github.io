@@ -71,7 +71,7 @@ markdown: kramdown
 permalink: pretty
 
 # Build settings
-theme: jekyll-agency
+theme: raviriley/agency-jekyll-theme
 plugins:
   - jekyll-feed
 
