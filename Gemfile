@@ -5,7 +5,7 @@ gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
-  # gem "github-pages" # https://github.com/github/pages-gem
+  gem "github-pages", "~> 228", group: :jekyll_plugins
 end
 
 # Uncomment the following line if developing on Windows: 
