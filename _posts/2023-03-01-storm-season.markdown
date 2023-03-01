@@ -1,7 +1,7 @@
 ---
 title: Storm Season
 subtitle: Getting a web presence
-layout: default
+layout: post
 modal-id: 1
 date: 2022-03-01
 img: Cartoon-Shingles-600-814.png
