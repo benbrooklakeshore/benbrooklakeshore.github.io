@@ -8,7 +8,7 @@ img: Cartoon-Shingles-600-814.png
 thumbnail: Cartoon-Shingles-400-289.png
 alt: image-alt
 project-date: March 2023
-category: Warnings, Weather, Solicitors
+category: Weather
 description: If a hail storm damages your roof
 ---
 

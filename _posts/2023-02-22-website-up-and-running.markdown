@@ -2,7 +2,7 @@
 title: Our website is up!
 subtitle: Getting a web presence
 layout: default
-modal-id: 1
+modal-id: 2
 date: 2022-02-22
 img: BLNA-600-814.png
 thumbnail: BLNA-400-289.png
