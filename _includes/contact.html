@@ -1,3 +1,28 @@
+<style>
+    @media (max-width: 550px) {
+        .big-container {display: none;}
+    }
+    @media (min-width: 550px) {
+        .small-container {display: none;}
+    }
+    /* Responsive iFrame */
+    .responsive-iframe-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+    .responsive-iframe-container iframe,   
+    .vresponsive-iframe-container object,  
+    .vresponsive-iframe-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <section id="contact">
         <div class="container">
             <div class="row">
@@ -7,7 +32,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <!-- <div class="col-lg-12">
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
@@ -37,6 +62,9 @@
                             </div>
                         </div>
                     </form>
+                </div> -->
+                <div class="responsive-iframe-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfSjQhe0uLT3_ltOvC2aX2cv60iNXiaDkvMp1FaHVJPCcqG3A/viewform?embedded=true" width="640" height="1177" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </div>
         </div>
