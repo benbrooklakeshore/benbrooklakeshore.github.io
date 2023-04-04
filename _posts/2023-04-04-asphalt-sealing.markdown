@@ -12,19 +12,17 @@ category: Maintenance
 description: Make an informed decision about your driveway maintenance
 ---
 
-# The Role of Seal Coating in Asphalt Pavement Maintenance
-
-## Understanding Asphalt Pavement
+### Understanding Asphalt Pavement
 
 Asphalt pavement is a static material, meaning that once it is laid down, its properties remain unchanged unless replaced entirely. Over time, cracking is inevitable, and there is no foolproof way to prevent it. Other common issues include bleeding/polishing and loosened aggregate. Rutting or shifting should not occur and, if present, may indicate problems with the pavement's base structure or drainage.
 
-## Seal Coating: Purpose and Limitations
+### Seal Coating: Purpose and Limitations
 
 Seal coating (also known as fog sealing) is a technique used by State Departments of Transportation (DOTs) to revitalize pavement on public roads as well as private companies to revitalize residential and commercial pavement. This process typically involves the application of a new layer of aggregate material, creating a new wearing surface. Seal coating can be effective in addressing issues with surface aggregate becoming unbonded without affecting the overall pavement structure. However, this is not a standard or anticipated situation.
 
 As a homeowner with a driveway, you are unlikely to experience the typical traffic load or heavy trucks traversing your driveway at high speeds, reducing the likelihood of your asphalt becoming worn out or damaged through use. Your primary concerns should be addressing potential issues stemming from poor design, substandard construction, or inadequate drainage. In the absence of these problems, there may be no need for intervention throughout the lifespan of your pavement, although its appearance may degrade over time. Seal coating can temporarily mitigate drainage issues originating from the pavement itself, rather than the surrounding yard, while also rejuvenating the surface appearance of your driveway.
 
-## Key Takeaways
+### Key Takeaways
 
 Before engaging into business with any asphalt contractor, make sure they are reputable and well reviewed. This can be done with a quick online search or a post on social media. Don't feel pressured to act fast when approached by door-to-door salesmen. A large financial decision like this should not be rushed into, and any good contractor will be willing to work with you if you need some time to plan for it. 
 
