@@ -1,15 +1,43 @@
+<style>
+    @media (max-width: 550px) {
+        .big-container {display: none;}
+    }
+    @media (min-width: 550px) {
+        .small-container {display: none;}
+    }
+    /* Responsive iFrame */
+    .responsive-iframe-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+    .responsive-iframe-container iframe,   
+    .vresponsive-iframe-container object,  
+    .vresponsive-iframe-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <!-- About Section -->
-<!--    <section id="about">
+   <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About our Neighborhood</h2>
-                    <h3 class="section-subheading text-muted">Take a glance at some of the history behind the Benbrook Lakeshore Neighborhood and surrounding areas!</h3>
+                    <h2 class="section-heading">Fiber Internet Petition</h2>
+                    <h3 class="section-subheading text-muted">Take a moment to express your interest in getting fiber internet to your home!</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="timeline">
+                    <div class="responsive-iframe-container">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdiBilCjBqyXbMBiWDH5nyM35teK7P8zyIXuGT1T7iGVVMHIw/viewform?embedded=true" width="640" height="1425" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <!-- <ul class="timeline">
                         <li>
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
@@ -73,8 +101,9 @@
                                     <br>Story!</h4>
                             </div>
                         </li>
-                    </ul>
+                    </ul> -->
+
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
