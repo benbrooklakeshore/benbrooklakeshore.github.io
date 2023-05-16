@@ -41,7 +41,7 @@ If you agree, please go to the form and check “Yes, I’m in!”.
 
 ### Questions
 
-I am sure many of you have questions. Please send them to me at [wifi@benbrooklakeshore.org](mailto://rlake@benbrooklakeshore.org). I will post the collective questions and answers on the Facebook group page. This way the Facebook page will not get overly cluttered by many repeat questions and comments. Otherwise, it will be hard to follow.
+I am sure many of you have questions. Please send them to me at [wifi@benbrooklakeshore.org](mailto:rlake@benbrooklakeshore.org). I will post the collective questions and answers on the Facebook group page. This way the Facebook page will not get overly cluttered by many repeat questions and comments. Otherwise, it will be hard to follow.
 
 There will be another community meeting planned to discuss this opportunity within a few weeks. But please do not wait to send your questions and indicate your interest in participation.
 If you like, please also sign up to the BLNA website at [BenbrookLakeshore.org](https://benbrooklakeshore.org) so that you are tied into all the activities going on and the discussions of things being planned. We will be posting the FAQs there as well. 
