@@ -1,6 +1,6 @@
 ---
 title: Fiber Internet Update
-subtitle: 500mb/s to each home! Take action to show your interest.
+subtitle: Take action to get access.
 layout: post
 modal-id: 5
 date: 2022-05-16
