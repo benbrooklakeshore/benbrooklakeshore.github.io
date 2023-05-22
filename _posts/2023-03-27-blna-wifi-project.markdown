@@ -11,6 +11,9 @@ project-date: March 2023
 category: Internet Access
 description: We're all tired of worthless internet speeds, let's work together to fix it!
 ---
+# IMPORTANT NOTE:
+
+## We have a new proposal currently being reviewed to use Spectrum to deliver fiber internet to all interested homes. Please see the other news article for more information. [SEE THE LATEST PROPOSAL HERE](https://www.benbrooklakeshore.org/#portfolioModal5)
 
 # Bringing truly high-speed internet to our neighborhood
 Many residents within the Benbrook Lakeshore neighborhood have experienced countless issues with finding decent internet access. In an effort to help the neighborhood find a solution, the Benbrook Lakeshore Neighborhood Association (BLNA) has put together a proposal for a way to improve our internet speeds. 
