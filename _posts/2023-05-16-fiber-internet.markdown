@@ -12,6 +12,8 @@ category: Internet Access
 description: Learn how you can get access to true high speed fiber internet
 ---
 
+[Download The Proposal Flyer Here](img/portfolio/BLNA Fiber Internet Flyer.pdf)
+
 ### Overview of The Current Proposition
 
 Hello Tiger Trail Community!
