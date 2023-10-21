@@ -6,7 +6,7 @@ modal-id: 0
 date: 2023-10-29 17:00:00
 img: trunk-or-treat.jpg
 thumbnail: trunk-or-treat.jpg
-alt: Tiger Trail Trunk-or-Treat Banner
+alt: image-alt
 project-date: October 2023
 category: BLNA
 description: Join us for a night of Halloween excitement! Get ready for an evening of costumes, games, and trunk-or-treating in your very own community. Don't forget to bring your creative trunk game and win candy for the young and young-at-heart.
