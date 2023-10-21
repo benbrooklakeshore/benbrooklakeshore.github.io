@@ -2,8 +2,8 @@
 title: BLNA Annual Meeting
 subtitle: Come vote and hear what the BLNA is doing
 layout: post
-modal-id: 0
-date: 2022-10-17
+modal-id: 1
+date: 2022-10-17 17:00:00
 img: "Boat Logo Full Color.png"
 thumbnail: "Boat Logo Full Color.png"
 alt: image-alt
@@ -23,5 +23,5 @@ However, we do not yet have the option to vote yet on the website.
 
 ### Express Your Concerns
 
-Please direct all questions to: [team@benbrooklakeshore.org](mailto:rick@benbrooklakeshore.org)
+Please direct all questions to: [rick@benbrooklakeshore.org](mailto:rick@benbrooklakeshore.org)
 
