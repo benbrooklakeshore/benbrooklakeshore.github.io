@@ -3,7 +3,7 @@ title: Tiger Trail Trunk-or-Treat 2023
 subtitle: Spooktacular Halloween Fun for Everyone!
 layout: post
 modal-id: 0
-date: 2023-10-29 17:00:00
+date: 2023-10-20 17:00:00
 img: trunk-or-treat.jpg
 thumbnail: trunk-or-treat.jpg
 alt: image-alt
