@@ -16,7 +16,7 @@ Hello everyone. We are thrilled to announce that the Spectrum Infrastructure ins
 
 Please note that they will be working in the easements, so even if you didn't express interest, they might be working across your lot easement. We appreciate your patience during this time. If you have any questions, feel free to reach out.
 
-If you encounter any issues or concerns with the Spectrum installation, please contact us via email at [fiber@benbrooklakeshore.org](mailto:fiber@benbrooklakeshore.org). We will relay your concerns to the construction team foreman, who is committed to resolving any issues and ensuring everything is done correctly.
+If you encounter any issues or concerns with the Spectrum installation, please contact us via email at [wifi@benbrooklakeshore.org](mailto:wifi@benbrooklakeshore.org). We will relay your concerns to the construction team foreman, who is committed to resolving any issues and ensuring everything is done correctly.
 
 Here are some updates on the progress:
 - There is a new Fiber line coming from 377 up Tiger Trail. 
