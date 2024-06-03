@@ -187,6 +187,15 @@ fieldset[disabled] .btn-xl.active {
     color: #{{ site.data.template.color.secondary }};
 }
 
+.navbar-brand {
+    float: left;
+}
+
+.navbar-logo {
+    height: 100%; /* This will make the logo take the full height of the navbar */
+    width: auto; /* This will keep the aspect ratio of the logo */
+}
+
 .navbar-default .navbar-collapse {
     border-color: rgba(255,255,255,.02);
 }
