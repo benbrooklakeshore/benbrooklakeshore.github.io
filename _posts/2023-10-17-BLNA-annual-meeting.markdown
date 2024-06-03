@@ -2,7 +2,7 @@
 title: BLNA Annual Meeting
 subtitle: Come vote and hear what the BLNA is doing
 layout: post
-modal-id: 1
+modal-id: 2
 date: 2022-10-17 17:00:00
 img: "Boat Logo Full Color.png"
 thumbnail: "Boat Logo Full Color.png"

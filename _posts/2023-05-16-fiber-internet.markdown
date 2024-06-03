@@ -2,7 +2,7 @@
 title: Fiber Internet Update
 subtitle: Take action to get access.
 layout: post
-modal-id: 5
+modal-id: 6
 date: 2022-05-16
 img: blna-fiber-600-814.png
 thumbnail: blna-fiber-400-289.png
