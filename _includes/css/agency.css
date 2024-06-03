@@ -189,10 +189,13 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-brand {
     float: left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 .navbar-logo {
-    height: 1000%; /* This will make the logo take the full height of the navbar */
+    height: 700%; /* This will make the logo take the full height of the navbar */
     width: auto; /* This will keep the aspect ratio of the logo */
 }
 
