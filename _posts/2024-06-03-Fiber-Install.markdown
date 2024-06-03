@@ -7,7 +7,7 @@ date: 2024-06-03 13:40:00
 img: blna-fiber-600-814.png
 thumbnail: blna-fiber-400-289.png
 alt: image-alt
-project-date: May 2023
+project-date: June 2024
 category: Internet Access
 description: Get the latest info on the fiber rollout!
 ---
