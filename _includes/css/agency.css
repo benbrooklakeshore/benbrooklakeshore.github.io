@@ -195,7 +195,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-logo {
-    height: 700%; /* This will make the logo take the full height of the navbar */
+    height: 100%; /* This will make the logo take the full height of the navbar */
     width: auto; /* This will keep the aspect ratio of the logo */
 }
 
