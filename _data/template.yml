@@ -1,9 +1,9 @@
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 0000FF
-  secondary: ADD8E6   
-  secondary-dark: 00008B  # Dark blue
-  muted: 7B68EE  # Medium slate blue
+  primary: 2d80d3
+  secondary: 80b3e6
+  secondary-dark: 1a4d80
+  muted: d37f2d
 
 # Font Families
 font:
