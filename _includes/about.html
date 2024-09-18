@@ -5,92 +5,62 @@
         height: auto;
         width: auto\9; /* ie8 */
     }
+    /* Additional styles for steps */
+    .step img {
+        margin-bottom: 15px;
+    }
+    .instructional-videos ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .instructional-videos li {
+        display: inline-block;
+        margin: 0 10px;
+    }
 </style>
+
 <!-- About Section -->
-   <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Fiber Internet Now Available!</h2>
-                    <h3 class="section-subheading text-muted">With Spectrum's Help, the BLNA is now offering high speed fiber internet service to our neighborhood!</h3>
-                    <p>Sign up now to be one of the first to get fiber internet in the neighborhood!</p>
-                    <a href="https://fiber.benbrooklakeshore.org/signup/" class="btn btn-xl">Sign Up Here</a>
-                    <img src="https://www.highspeedinternet.com/app/uploads/2021/02/How-fast-is-Fiber.jpg"/>
+<section id="about">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Fiber Internet Now Available!</h2>
+                <h3 class="section-subheading text-muted">With Spectrum's help, the BLNA is now offering high-speed fiber internet service to our neighborhood!</h3>
+                <p>Sign up now to be one of the first to get fiber internet in the neighborhood!</p>
+            </div>
+        </div>
+        <!-- Steps Section -->
+        <div class="row">
+            <!-- Step 1 -->
+            <div class="col-md-6 text-center step">
+                <h2>Step 1</h2>
+                <p>Sign up and set up through Spectrum to get service installed.</p>
+                <a href="https://spectrum.com/servicesetup" target="_blank" rel="noopener noreferrer" aria-label="Go to Spectrum Service Setup">
+                    <img src="https://tbcdn.talentbrew.com/company/4673/v4_0/img/og/communitysolutions_og.png" alt="Spectrum Service Setup">
+                    <br>
+                    <button class="btn btn-primary btn-xl">Go to Spectrum Service Setup</button>
+                </a>
+            </div>
+            <!-- Step 2 -->
+            <div class="col-md-6 text-center step">
+                <h2>Step 2</h2>
+                <p>Sign up and set up through the VISP.net portal to handle billing for the base 500Mbps internet package.</p>
+                <a href="https://fiber.benbrooklakeshore.org/signup" target="_blank" rel="noopener noreferrer" aria-label="Go to VISP.net Signup">
+                    <img src="https://i.ytimg.com/vi/uUJ9hDRNujk/maxresdefault.jpg" alt="VISP.net Signup">
+                    <br>
+                    <button class="btn btn-primary btn-xl">Go to VISP.net Signup</button>
+                </a>
+            </div>
+        </div>
+        <!-- Instructional Videos Section -->
+        <div class="row">
+            <div class="col-lg-12 text-center instructional-videos">
+                <h3>Instructional Videos</h3>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bk4sNNhjTSw" allowfullscreen></iframe>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-lg-12">
-
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-
-                </div>
-            </div> -->
         </div>
-        <!-- <div class="responsive-iframe-container-2">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdiBilCjBqyXbMBiWDH5nyM35teK7P8zyIXuGT1T7iGVVMHIw/viewform?embedded=true" width="640" height="1425" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>                    
-        </div> -->
-    </section>
+    </div>
+</section>

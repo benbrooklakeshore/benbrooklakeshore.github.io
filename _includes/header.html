@@ -1,69 +1,88 @@
 <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">    
-                    <img class="navbar-logo" src="img/Boat Logo Full Color Horiz.png" alt="BLNA">
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">News</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <!-- Add a link to an external page -->
-                    <li> 
-                        <a href="https://fiber.benbrooklakeshore.org/">Access Fiber Portal</a>
-                    </li>
-                    <li> 
-                        <a href="https://fiber.benbrooklakeshore.org/signup/">Create Fiber Account</a>
-                    </li>
-                    <!-- Help menu with dropdown -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://youtu.be/bk4sNNhjTSw?si=2ogaYorqxgHCkJNt">Portal Guide</a></li>
-                            <li><a class="page-scroll" href="#contact">Contact Support</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">    
+                <img class="navbar-logo" src="img/Boat Logo Full Color Horiz.png" alt="BLNA">
+            </a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Benbrook Lakeshore Neighborhood Association</div>
-                <div class="intro-heading">Welcome Neighbors!</div>
-                <a href="#services" class="page-scroll btn btn-xl">Learn More</a>
-            </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#services">Services</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">Get Fiber</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#portfolio">News</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#team">Team</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+                <!-- Add a link to an external page -->
+                <li> 
+                    <a href="https://fiber.benbrooklakeshore.org/">Fiber Portal Login</a>
+                </li>
+                <!-- Help menu with dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://youtu.be/bk4sNNhjTSw?si=2ogaYorqxgHCkJNt">Portal Guide</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact Support</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </header>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in">Benbrook Lakeshore Neighborhood Association</div>
+            <div class="intro-heading">Welcome Neighbors!</div>
+            <a href="#services" class="page-scroll btn btn-xl">Learn More</a>
+        </div>
+    </div>
+</header>
+
+<!-- Custom styles for the dropdown menu -->
+<style>
+.navbar-nav .dropdown-menu {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+}
+
+.navbar-nav .dropdown-menu a {
+    color: #fff; /* White text color for links */
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+    color: #fff; /* White text color on hover */
+}
+</style>
+
+
 <!--
         {% for page in site.pages %}
           {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
