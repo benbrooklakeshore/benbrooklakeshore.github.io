@@ -1,0 +1,92 @@
+{% if site.notification_banner.enabled %}
+<!-- Notification Banner -->
+<div id="notification-banner" style="
+    background-color: {{ site.notification_banner.background_color | default: '#d9534f' }};
+    color: {{ site.notification_banner.text_color | default: '#ffffff' }};
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+">
+    <div class="container">
+        {% if site.notification_banner.link %}
+            <a href="{{ site.notification_banner.link }}" style="color: inherit; text-decoration: none;">
+                {{ site.notification_banner.message }}
+            </a>
+        {% else %}
+            {{ site.notification_banner.message }}
+        {% endif %}
+        <button onclick="closeBanner()" style="
+            background: none;
+            border: none;
+            color: inherit;
+            float: right;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 15px;
+        ">&times;</button>
+    </div>
+</div>
+
+<!-- Push content down to account for fixed banner -->
+<style>
+    body.index {
+        padding-top: 40px;
+    }
+    
+    .navbar-fixed-top {
+        top: 40px;
+    }
+    
+    /* When banner is closed */
+    body.banner-closed {
+        padding-top: 0;
+    }
+    
+    body.banner-closed .navbar-fixed-top {
+        top: 0;
+    }
+    
+    @media (max-width: 768px) {
+        #notification-banner {
+            font-size: 12px;
+            padding: 8px 0;
+        }
+        
+        body.index {
+            padding-top: 35px;
+        }
+        
+        .navbar-fixed-top {
+            top: 35px;
+        }
+        
+        body.banner-closed .navbar-fixed-top {
+            top: 0;
+        }
+    }
+</style>
+
+<script>
+function closeBanner() {
+    document.getElementById('notification-banner').style.display = 'none';
+    document.body.classList.add('banner-closed');
+    // Store in localStorage so banner stays closed for the session
+    localStorage.setItem('bannerClosed', 'true');
+}
+
+// Check if banner was previously closed
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('bannerClosed') === 'true') {
+        closeBanner();
+    }
+});
+</script>
+{% endif %}

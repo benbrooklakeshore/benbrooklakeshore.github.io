@@ -61,6 +61,14 @@ social:
   - title: facebook
     url: https://www.facebook.com/BLNAus/
 
+# Notification banner settings
+notification_banner:
+  enabled: true
+  message: "🚨 Important: Annual Meeting scheduled for September 28th at 4 PM - Community Center"
+  link: "#contact"
+  background_color: "#d9534f"
+  text_color: "#ffffff"
+
 # Postal address (add as many lines as necessary)
 address:
   - line: 6108 Tiger Trail
