@@ -34,27 +34,27 @@ people:
 
 - name: James Staud
   pic: 2
-  position: Vice President
+  position: Secretary
 
-- name: Rob Lake
+- name: Rob Donahue
   pic: 3
-  position: Board Member, High Speed Internet Committee Member
+  position: Board Member
 
 - name: Lisa Bradberry
   pic: 4
-  position: Treasurer
+  position: Board Member
 
 - name: Adam Driggers
   pic: 5
   position: Board Member
 
-- name: Bruce Southey
+- name: Lynn Sneed
   pic: 6
-  position: Board Member, Safety and Security Committee Member
+  position: Treasurer
 
 - name: Skip Madara
   pic: 3
-  position: Board Member and CC Building Manager
+  position: Board Member
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
