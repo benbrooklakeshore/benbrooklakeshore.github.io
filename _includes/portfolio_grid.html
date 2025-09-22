@@ -1,4 +1,4 @@
-<!-- Portfolio Grid Section -->
+<!-- Portfolio List Section -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -8,22 +8,29 @@
                 </div>
             </div>
             <div class="row">
-            {% for post in site.posts %}
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                <div class="col-lg-8 col-lg-offset-2">
+                    {% for post in site.posts %}
+                    <div class="portfolio-item list-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                                    <img src="img/portfolio/{{ post.thumbnail }}" class="img-responsive" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="portfolio-caption">
+                                    <h4><a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">{{ post.title }}</a></h4>
+                                    <p class="text-muted">{{ post.subtitle }}</p>
+                                    {% if post.date %}
+                                    <p class="text-muted"><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
-                        <img src="img/portfolio/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>{{ post.title }}</h4>
-                        <p class="text-muted">{{ post.subtitle }}</p>
+                        <hr class="portfolio-divider">
                     </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}
             </div>
         </div>
     </section>
