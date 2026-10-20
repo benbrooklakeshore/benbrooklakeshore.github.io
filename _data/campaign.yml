@@ -1,0 +1,21 @@
+# Fiber campaign progress banner on the homepage.
+# Update this file about once a month. No other files need to change.
+#   current:            paid-up homes signed up so far
+#   goal:               homes needed for fiber to pay for itself (break-even)
+#   homes_in_program:   homes covered by the program
+#   price:              monthly price in dollars
+#   package:            plan name shown next to the price
+#   as_of:              month the figures were last checked, shown in the footnote
+#   milestones:         home counts drawn as tick marks on the bar.
+#                       While current is below goal, the bar fills toward goal.
+#                       Once current reaches goal, the bar fills toward the next
+#                       milestone above current.
+# Set enabled to false to hide the banner.
+enabled: true
+current: 116
+goal: 146
+homes_in_program: 208
+price: 75
+package: "Fiber 500"
+as_of: "October 2026"
+milestones: [130, 146, 155]
