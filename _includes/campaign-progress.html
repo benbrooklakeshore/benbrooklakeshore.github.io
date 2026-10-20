@@ -1,0 +1,349 @@
+{% assign campaign = site.data.campaign %}
+{% if campaign.enabled %}
+{% assign current = campaign.current | plus: 0 %}
+{% assign goal = campaign.goal | plus: 0 %}
+{% assign homes_in_program = campaign.homes_in_program | plus: 0 %}
+{% assign price = campaign.price | plus: 0 %}
+{% assign reached = false %}
+{% if current >= goal %}
+  {% assign reached = true %}
+{% endif %}
+{% assign has_next = false %}
+{% assign next_milestone = 0 %}
+{% if reached %}
+  {% for milestone in campaign.milestones %}
+    {% assign milestone_value = milestone | plus: 0 %}
+    {% if milestone_value > current %}
+      {% if has_next %}
+        {% if milestone_value < next_milestone %}
+          {% assign next_milestone = milestone_value %}
+        {% endif %}
+      {% else %}
+        {% assign next_milestone = milestone_value %}
+        {% assign has_next = true %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign bar_max = goal %}
+{% if reached %}
+  {% if has_next %}
+    {% assign bar_max = next_milestone %}
+  {% else %}
+    {% assign bar_max = current %}
+    {% if goal > bar_max %}
+      {% assign bar_max = goal %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% if bar_max <= 0 %}
+  {% assign bar_max = 1 %}
+{% endif %}
+{% assign percent = current | times: 100 | divided_by: bar_max %}
+{% if percent > 100 %}
+  {% assign percent = 100 %}
+{% endif %}
+{% if percent < 0 %}
+  {% assign percent = 0 %}
+{% endif %}
+{% assign aria_now = current %}
+{% if aria_now > bar_max %}
+  {% assign aria_now = bar_max %}
+{% endif %}
+{% if aria_now < 0 %}
+  {% assign aria_now = 0 %}
+{% endif %}
+{% assign to_go = goal | minus: current %}
+{% if to_go < 0 %}
+  {% assign to_go = 0 %}
+{% endif %}
+{% assign remaining = bar_max | minus: current %}
+{% if remaining < 0 %}
+  {% assign remaining = 0 %}
+{% endif %}
+
+<style>
+    .campaign-progress {
+        margin: 0 auto 50px;
+        max-width: 920px;
+        text-align: center;
+        color: #333;
+    }
+    .campaign-progress-eyebrow {
+        margin: 0 0 8px;
+        color: #{{ site.data.template.color.primary }};
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+    }
+    .campaign-progress-headline {
+        margin: 0 0 10px;
+        color: #{{ site.data.template.color.secondary-dark }};
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.15;
+        text-transform: uppercase;
+    }
+    .campaign-progress-subline {
+        margin: 0 auto 22px;
+        max-width: 640px;
+        color: #777;
+        font-family: {{ site.data.template.font.secondary }};
+        font-size: 16px;
+        font-style: italic;
+        line-height: 1.5;
+    }
+    .campaign-progress-goal {
+        margin: 0 0 6px;
+        color: #555;
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 13px;
+        font-weight: 700;
+        text-align: right;
+    }
+    .campaign-progress-bar {
+        position: relative;
+        margin: 0 0 8px;
+    }
+    .campaign-progress-track {
+        position: relative;
+        height: 36px;
+        overflow: hidden;
+        background: #e6ebf1;
+        border-radius: 999px;
+    }
+    .campaign-progress-fill {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        background: linear-gradient(90deg, #{{ site.data.template.color.secondary }} 0%, #{{ site.data.template.color.primary }} 100%);
+        border-radius: 999px;
+    }
+    .campaign-progress-fill-label {
+        padding-right: 12px;
+        color: #fff;
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .campaign-progress-ticks {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 36px;
+        pointer-events: none;
+    }
+    .campaign-progress-tick {
+        position: absolute;
+        top: 4px;
+        width: 2px;
+        height: 28px;
+        background: #{{ site.data.template.color.secondary-dark }};
+    }
+    .campaign-progress-scale {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        color: #777;
+        font-size: 13px;
+    }
+    .campaign-progress-scale span:nth-child(2) {
+        text-align: center;
+    }
+    .campaign-progress-stats {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 28px 0 22px;
+    }
+    .campaign-progress-stat {
+        flex: 1 1 0;
+    }
+    .campaign-progress-stat-value {
+        color: #{{ site.data.template.color.primary }};
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+    .campaign-progress-stat-label {
+        margin-top: 4px;
+        color: #8a8a8a;
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+    .campaign-progress-why {
+        margin: 0 0 22px;
+        padding: 14px 16px;
+        color: #333;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+        background: #f3faf5;
+        border-left: 4px solid #{{ site.data.template.color.secondary }};
+        border-radius: 4px;
+    }
+    .campaign-progress-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+    .campaign-progress a.campaign-progress-btn {
+        display: inline-block;
+        min-width: 220px;
+        padding: 14px 22px;
+        border-radius: 4px;
+        color: #fff;
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        line-height: 1.2;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .campaign-progress a.campaign-progress-btn-primary {
+        background: #{{ site.data.template.color.primary }};
+    }
+    .campaign-progress a.campaign-progress-btn-primary:hover,
+    .campaign-progress a.campaign-progress-btn-primary:focus {
+        background: #{{ site.data.template.color.secondary-dark }};
+        color: #fff;
+        text-decoration: none;
+    }
+    .campaign-progress a.campaign-progress-btn-call {
+        background: #{{ site.data.template.color.secondary }};
+    }
+    .campaign-progress a.campaign-progress-btn-call:hover,
+    .campaign-progress a.campaign-progress-btn-call:focus {
+        background: #007a1e;
+        color: #fff;
+        text-decoration: none;
+    }
+    .campaign-progress a.campaign-progress-btn:focus {
+        outline: 2px solid #{{ site.data.template.color.secondary-dark }};
+        outline-offset: 2px;
+    }
+    .campaign-progress-footnote {
+        margin: 0;
+        color: #999;
+        font-size: 12px;
+    }
+    @media (max-width: 520px) {
+        .campaign-progress-headline {
+            font-size: 30px;
+        }
+        .campaign-progress-stats {
+            flex-wrap: wrap;
+            row-gap: 18px;
+        }
+        .campaign-progress-stat {
+            flex: 0 0 46%;
+        }
+        .campaign-progress-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .campaign-progress a.campaign-progress-btn {
+            width: 100%;
+            min-width: 0;
+        }
+        .campaign-progress-scale {
+            font-size: 12px;
+            gap: 8px;
+        }
+    }
+</style>
+
+<div class="campaign-progress">
+    <p class="campaign-progress-eyebrow">Neighborhood Fiber Goal</p>
+    {% if reached %}
+    <h2 class="campaign-progress-headline" id="campaign-progress-heading">We did it</h2>
+    <p class="campaign-progress-subline">Every new home now supports the community center.{% if has_next %} Next milestone: {{ next_milestone }} homes.{% endif %}</p>
+    {% else %}
+    <h2 class="campaign-progress-headline" id="campaign-progress-heading">{{ current }} of {{ goal }} homes</h2>
+    <p class="campaign-progress-subline">
+        {% if to_go == 1 %}
+        1 more neighbor and our fiber pays for itself. After that, the surplus goes to our community center.
+        {% else %}
+        {{ to_go }} more neighbors and our fiber pays for itself. After that, the surplus goes to our community center.
+        {% endif %}
+    </p>
+    {% endif %}
+
+    <div class="campaign-progress-goal">
+        {% if reached and has_next %}
+        Next: {{ next_milestone }}
+        {% else %}
+        Goal: {{ goal }}
+        {% endif %}
+    </div>
+    <div class="campaign-progress-bar">
+        <div class="campaign-progress-track" role="progressbar" aria-valuenow="{{ aria_now }}" aria-valuemin="0" aria-valuemax="{{ bar_max }}" aria-label="{% if reached %}Goal reached. {{ current }} of {{ bar_max }} homes.{% else %}{{ current }} of {{ goal }} homes signed up.{% endif %}">
+            <div class="campaign-progress-fill" style="width: {{ percent }}%;">
+                {% if percent >= 18 %}
+                <span class="campaign-progress-fill-label">{{ current }}</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="campaign-progress-ticks" aria-hidden="true">
+            {% for milestone in campaign.milestones %}
+            {% assign milestone_value = milestone | plus: 0 %}
+            {% if milestone_value > 0 and milestone_value <= bar_max %}
+            {% assign tick = milestone_value | times: 100 | divided_by: bar_max %}
+            <span class="campaign-progress-tick" style="left: {{ tick }}%;"></span>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="campaign-progress-scale">
+        <span>0</span>
+        <span>Today: {{ current }} homes</span>
+        <span>
+            {% if bar_max == goal %}
+            {{ goal }} = break-even
+            {% else %}
+            {{ bar_max }} homes
+            {% endif %}
+        </span>
+    </div>
+
+    <div class="campaign-progress-stats">
+        <div class="campaign-progress-stat">
+            <div class="campaign-progress-stat-value">{{ current }}</div>
+            <div class="campaign-progress-stat-label">Homes signed up</div>
+        </div>
+        <div class="campaign-progress-stat">
+            <div class="campaign-progress-stat-value">{{ to_go }}</div>
+            <div class="campaign-progress-stat-label">To go</div>
+        </div>
+        <div class="campaign-progress-stat">
+            <div class="campaign-progress-stat-value">{{ homes_in_program }}</div>
+            <div class="campaign-progress-stat-label">Homes in the program</div>
+        </div>
+        <div class="campaign-progress-stat">
+            <div class="campaign-progress-stat-value">${{ price }}</div>
+            <div class="campaign-progress-stat-label">Per month, {{ campaign.package }}</div>
+        </div>
+    </div>
+
+    <p class="campaign-progress-why"><strong>Why it matters:</strong> BLNA is a nonprofit. Once the fiber bills are covered, every extra dollar supports the community center we maintain for neighbors' events, parties, classes and meetings.</p>
+
+    <div class="campaign-progress-actions">
+        <a class="campaign-progress-btn campaign-progress-btn-primary" href="https://fiber.benbrooklakeshore.org/signup/" target="_blank" rel="noopener noreferrer">Sign up online</a>
+        <a class="campaign-progress-btn campaign-progress-btn-call" href="tel:8336977328">Call Spectrum: 833-697-7328</a>
+    </div>
+    <p class="campaign-progress-footnote">Updated {{ campaign.as_of }}.</p>
+</div>
+{% endif %}
