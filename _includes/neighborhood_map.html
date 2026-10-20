@@ -1,0 +1,43 @@
+<style>
+    .neighborhood-map-figure {
+        margin: 0;
+    }
+    .neighborhood-map-link {
+        display: block;
+    }
+    .neighborhood-map-link img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+    .neighborhood-map-caption {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+</style>
+
+<!-- Neighborhood Map Section -->
+<section id="neighborhood-map" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Neighborhood Map</h2>
+                <h3 class="section-subheading text-muted">Parcel boundaries south of Tiger Trail, out to Benbrook Lake.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <figure class="neighborhood-map-figure">
+                    <a class="neighborhood-map-link" href="{{ '/img/blna-boundaries-web.jpg' | prepend: site.baseurl }}" target="_blank" rel="noopener noreferrer">
+                        <img class="img-responsive" src="{{ '/img/blna-boundaries-web.jpg' | prepend: site.baseurl }}" width="1219" height="774" alt="Color-coded parcel map of Benbrook Lakeshore and neighboring areas south of Tiger Trail out to Benbrook Lake. Blue is Benbrook Lakeshore. Dark red is Lake Ridge Addition. Orange is the B. R. Lacy Survey. Green is Twilight Addition. Red is Deerwood Forest. Gray is the W. A. Hunter Survey. Pink is Rawleigh Place Addition.">
+                    </a>
+                    <figcaption class="text-center text-muted neighborhood-map-caption">
+                        <p>Click the map to open the full-size image.</p>
+                        <p>Benbrook Lakeshore is shown in blue. The map also shows Lake Ridge Addition, the B. R. Lacy Survey, Twilight Addition, Deerwood Forest, the W. A. Hunter Survey, and Rawleigh Place Addition.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
