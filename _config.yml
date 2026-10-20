@@ -63,7 +63,7 @@ social:
 
 # Notification banner settings
 notification_banner:
-  enabled: true
+  enabled: false
   message: "🚨 Important: Annual Meeting scheduled for September 28th at 4 PM - Community Center"
   link: "#contact"
   background_color: "#d9534f"
